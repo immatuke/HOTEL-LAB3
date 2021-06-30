@@ -13,7 +13,8 @@ public class Menu {
     }
 
     public static void adminMain() {
-        System.out.println("1. Administrar conserjes");
+    	System.out.println("\n----------Menu Admin------------\n");
+        System.out.println("\n1. Administrar conserjes");
         System.out.println("2. Administrar habitaciones");
         System.out.println("3. Administrar clientes");
         System.out.println("4. Administrar informacion propia");
@@ -23,7 +24,8 @@ public class Menu {
     }
 
     public static void adminSubMenuClientes() {
-        System.out.println("1. Ver registros de clientes");
+    	System.out.println("\n----------Admin SubMenu Clientes------------\n");
+        System.out.println("\n1. Ver registros de clientes");
         System.out.println("2. Eliminar cliente del sistema");
         System.out.println();
         System.out.println("0. Volver\n");
@@ -31,7 +33,8 @@ public class Menu {
     }
 
     public static void adminSubMenuRecepcionista() {
-        System.out.println("1. Dar alta a recepcionista");
+    	System.out.println("\n----------Admin SubMenu Recepcionista------------\n");
+        System.out.println("\n1. Dar alta a recepcionista");
         System.out.println("2. Modificar datos de recepcionista");
         System.out.println("3. Habilitar/deshabilitar recepcionista");
         System.out.println("4. Eliminar recepcionista.");
@@ -42,7 +45,8 @@ public class Menu {
     }
 
     public static void adminSubMenuHabitaciones() {
-        System.out.println("1. Crear habitacion");
+    	System.out.println("\n----------Admin SubMenu Habitaciones------------\n");
+        System.out.println("\n1. Crear habitacion");
         System.out.println("2. Modificar tipo de habitacion");
         System.out.println("3. Modificar precio de habitacion");
         System.out.println("4. Eliminar habitacion");
@@ -53,7 +57,8 @@ public class Menu {
     }
 
     public static void recepcionistaMain() {
-        System.out.println("1. Gestion de reservas");
+    	System.out.println("\n----------Recepcionista Menu------------\n");
+        System.out.println("\n1. Gestion de reservas");
         System.out.println("2. Gestion de clientes");
         System.out.println("3. Gestion de habitaciones");
         System.out.println("4. Modificar informacion propia");
@@ -63,7 +68,8 @@ public class Menu {
     }
 
     public static void recepcionistaSubMenuReservas() {
-        System.out.println("1. Generar reserva");
+      	System.out.println("\n----------Recepcionista SubMenu Reservas------------\n");
+        System.out.println("\n1. Generar reserva");
         System.out.println("2. Check-in");
         System.out.println("3. Check-out");
         System.out.println("4. Ver reservas");
@@ -76,7 +82,8 @@ public class Menu {
     }
 
     public static void recepcionistaSubMenuClientes() {
-        System.out.println("1. Ver lista de clientes");
+    	System.out.println("\n----------Recepcionista SubMenu Clientes------------\n");
+        System.out.println("\n1. Ver lista de clientes");
         System.out.println("2. Modificar datos de un cliente");
         System.out.println();
         System.out.println("0. Volver");
@@ -84,7 +91,8 @@ public class Menu {
     }
 
     public static void recepcionistaSubMenuHabitaciones() {
-        System.out.println("1. Ver habitaciones libres");
+    	System.out.println("\n----------Recepcionista SubMenu Habitaciones------------\n");
+        System.out.println("\n1. Ver habitaciones libres");
         System.out.println("2. Ver habitaciones ocupadas");
         System.out.println();
         System.out.println("0. Volver");
@@ -93,7 +101,8 @@ public class Menu {
 
 
     public static void subMenuInfoPropia() {
-        System.out.println("1. Ver informacion propia");
+    	System.out.println("\n----------SubMenu InfoPropia------------\n");
+        System.out.println("\n1. Ver informacion propia");
         System.out.println("2. Modificar informacion");
         System.out.println();
         System.out.println("0. Volver\n");
@@ -101,7 +110,7 @@ public class Menu {
     }
 
     public static void menuModificarCliente() {
-        System.out.println("MODIFICAR CLIENTE\n");
+        System.out.println("\n--MODIFICAR CLIENTE--\n");
         System.out.println("1. Nombre");
         System.out.println("2. Apellido");
         System.out.println("3. DNI");
@@ -127,7 +136,7 @@ public class Menu {
 
 
     private static void seleccionOpcion() {
-        System.out.print("Seleccione ... ");
+        System.out.print("\nSeleccione ... ");
     }
 
     public static void confirmarConTeclaS() {

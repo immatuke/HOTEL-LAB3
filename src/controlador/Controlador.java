@@ -2,7 +2,7 @@ package controlador;
 
 import archivos.Archivos;
 import menus.*;
-import utiles.IOGenericoUtil;
+import utiles.*;
 import model.*;
 import java.util.Scanner;
 
@@ -39,7 +39,8 @@ public class Controlador {
         String opcion;
 
         while (!loginExitoso) {
-
+        	System.out.println("\n -----------------Bienvenido al SISTEMA-------------\n");
+        	System.out.println(" SI ES EL PRIMER INGRESO PONGA DE ID : admin y Clave: password\n");
             System.out.print("Ingrese ID: ");
             String idLogin = scanner.nextLine();
             System.out.print("Ingrese clave: ");
@@ -49,16 +50,16 @@ public class Controlador {
             if (idLogin.equals(hotel.getAdmin().getId()) &&
                     idPassword.equals(hotel.getAdmin().getPassword().getClave())) {
 
-                System.out.println("Inicio sesion exitoso.");
-                System.out.println("Ha iniciado sesion como Admin");
+                System.out.println("\n Inicio sesion exitoso.");
+                System.out.println("\nHa iniciado sesion como Admin\n");
 
                 Admin admin = hotel.getAdmin();
                 if (admin.equals(Admin.proveerDefaultAdmin())) {
                     hayAdmin = false;
                 }
                 if (!hayAdmin) {
-                    System.out.println("Usted ha iniciado sesion con credenciales por defecto. " +
-                            "Se recomienda que estas sean modificadas.");
+                    System.out.println("\nUsted ha iniciado sesion con credenciales por defecto. \n" +
+                            "\nSe recomienda que estas sean modificadas.\n");
                 }
                 loginExitoso = true;
                 /*Menu de Admin*/
@@ -197,7 +198,7 @@ public class Controlador {
             } else if (hotel.getRecepcionista().containsKey(idLogin) &&
                     idPassword.equals(hotel.getRecepcionista().get(idLogin).getPassword().getClave())) {
                 Recepcionista recepcionista = hotel.getRecepcionista().get(idLogin);
-                System.out.println("Ha iniciado sesion como Recepcionista. Bienvenido " + recepcionista.getNombre());
+                System.out.println("\nHa iniciado sesion como Recepcionista. Bienvenido \n" + recepcionista.getNombre());
                 loginExitoso = true;
 
                 if (!recepcionista.isHabilitado()) {
@@ -211,7 +212,7 @@ public class Controlador {
                             /*Submenu reservas*/
                             case "1":
                                 if (hotel.getHabitaciones().isEmpty()) {
-                                    System.out.println("ERROR: no existen habitaciones habilitadas en el sistema." +
+                                    System.out.println("\n ERROR: no existen habitaciones habilitadas en el sistema." +
                                             "Contacte al administrador.");
                                 } else {
                                     String subOpcion1;
@@ -282,7 +283,7 @@ public class Controlador {
                             /*Submenu habitaciones*/
                             case "3":
                                 if (hotel.getHabitaciones().isEmpty()) {
-                                    System.out.println("Error: no existen habitaciones cargadas en sistema." +
+                                    System.out.println("\n Error: no existen habitaciones cargadas en sistema." +
                                             "Contacte al administrador.");
                                 }
                                 String subOpcion3;
@@ -336,7 +337,7 @@ public class Controlador {
 
                 }
             } else {
-                System.out.println("El ID de usuario no existe o la contraseña es incorrecta.");
+                System.out.println("\n El ID de usuario no existe o la contraseña es incorrecta.\n");
             }
         }
         scanner.close();
